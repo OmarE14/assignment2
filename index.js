@@ -1,21 +1,28 @@
-// require module
-var connect = require('connect')
- 
-// create app
-var app = connect()
-
-
-function hellowrld(req,res,next){
-
-res.setHeader('Content-Type','text/plain',);
-res.end('hello wrld!');
+const express = require('express')
+const app = express()
+const port = 3000;
 
 
 
-app.use(hellowrld);
-app.listen(3000);
+
+app.get('/home', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.get('/projects', (req, res) => {
+    res.send('projects')
+})
+
+app.get('/about', (req, res) => {
+    res.send('about me')
+})
+
+app.get('/contact', (req, res) => {
+    res.send('contact us')
+})
+
+app.listen(port, () => {
+  console.log('Example app listening on port ${port}')
+})
 
 
-
-console.log("severs running on local host. ");
-}
