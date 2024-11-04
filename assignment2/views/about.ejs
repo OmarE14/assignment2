@@ -1,0 +1,94 @@
+    <div class="wrapper">
+
+        <h1>About Me</h1>
+
+        <img src="omar.png" alt="Picture of me">
+
+        <p> I was born on October 1st 2003, Giza Egypt. I spent my childhood living in Belgium, Saudi Arabia & Canada.
+            I love to play video games, relax, spend time with family and friends & play soccer. I am big fan of Arsenal FC.
+            
+            
+        </p>
+
+
+
+    </div>
+    
+
+    <div class="wrapper">
+
+        <h1>Brief Intro Video</h1>
+
+        <video width="460" height="300" controls preload="auto" autoplay loop muted id="myvid" poster="video.png">
+
+            <source src="webvid.mp4" type="video/mp4">
+
+            <source src="webvid.ogv" type="video/ogg">
+
+        </video>
+
+        <br>
+        <button onclick="playpause()">Play/Pause</button>
+        <button onclick="fullscreen_mode()">View in fullscreen</button>
+        <button onclick="unmute()">Sound on</button>
+        <button onclick="mute()">Sound off</button>
+
+        <script>
+            var mybtn=document.getElementById("myvid"); 
+            function playpause(){
+
+                if (mybtn.paused)
+                    mybtn.play();
+                else 
+                    mybtn.pause();
+
+            }
+
+            function unmute(){
+
+                
+                mybtn.muted=false
+                
+                    
+
+            }
+
+            function mute(){
+
+                mybtn.muted=true
+            }
+
+            function fullscreen_mode(){
+
+            if (mybtn.requestFullscreen) 
+            {
+                mybtn.requestFullscreen();
+             } 
+             
+             else if (mybtn.webkitRequestFullscreen) 
+             { 
+                mybtn.webkitRequestFullscreen();
+                // for browsers that use webkit engine
+             } 
+             
+             else if (mybtn.msRequestFullscreen) 
+             { 
+                mybtn.msRequestFullscreen();
+
+                //for internet explorer
+             }
+            }
+                
+
+          
+            
+
+
+        </script>
+
+  <!--- credits to ww3schools for mute and unmute button & fullscreen button citations in readme file-->
+
+
+
+
+    </div>
