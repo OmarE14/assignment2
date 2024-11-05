@@ -14,7 +14,7 @@ let  app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.set('layout', 'index'); // Use index.ejs as the main layout
+
 //enter mods here
 
 app.use(logger('dev'));

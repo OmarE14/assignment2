@@ -1,24 +1,33 @@
+  <%- include partials/header.ejs %>
+    <%- include partials/main_nav.ejs %>
+
+
+    <body>
+    <main>
+    <h1> welcome to <%=title%> page </h1>
 
 
 
-<%- include partials/header.ejs %>
-<%- include partials/main_nav.ejs %>
-
-<main>
-<h1> welcome to <%=title%> page </h1>
- <% if (title == "home") {%>
-          <%- include home.ejs %>
-          <% } else if (title =="about"){%>
-          <%- include about.ejs %>
-          <%}%>
-
-</main>
-
-<%- include partials/bottom_nav.ejs %>
-<%- include partials/footer.ejs %>
 
 
 
+    <% if (title == "home") {%>
+            <%- include home.ejs %>
+            <% } else if (title =="about"){%>
+            <%- include about.ejs %>
+            <%}%>
+
+
+    </main>
+
+
+
+
+    <%- include partials/bottom_nav.ejs %>
+    <%- include partials/footer.ejs %>
+
+
+    </body>
 
 
 
